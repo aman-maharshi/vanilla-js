@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,600');
+
+body {font-family: 'Poppins', sans-serif; }
+
+.container {
+    max-width: 600px;
+    min-height: 300px;
+    margin: 0 auto;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    padding: 1em;
+    text-align: center;
+}
+h1 {font-size: 3em;}
+form > * {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+}
+form input {
+    margin-right: 1em;
+    border:  2px solid gray;
+    border-radius: 5px;
+    width: 40%;
+}
+#outputbox {
+    padding: 1em;
+}
