@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Righteous');
+
+body {
+    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+h1 {
+    position: absolute;
+    top: 1em;
+    font-family: Righteous, Pacifico, sans-serif;
+    font-size: 4rem;
+    background: -webkit-linear-gradient(#30cfd0, #330867);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+}
+.container {
+    z-index: 5;
+}
+@media (max-width: 730px) {
+    .container {
+        width: 325px;
+    }
+    h1 {
+        font-size: 3.2rem;
+    }
+}
+.empty {
+    display: inline-block;
+    background: white;
+    height: 160px;
+    width: 160px;
+}
+.fill {
+    background-color: #16a085;
+    background-image: url('https://source.unsplash.com/random/150x150');
+    position: relative;
+    height: 150px;
+    width: 150px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+.hold {
+    border: 4px solid #ccc;
+}
+.hovered {
+    background: #f4f4f4;
+    border-style: dashed;
+}
+.invisible {
+    display: none;
+}
