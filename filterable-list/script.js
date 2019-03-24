@@ -1,10 +1,12 @@
-let textInput = document.getElementById('search');
-let names = document.querySelectorAll('.collection-item');
-let heading = document.querySelectorAll('.collection-header');
+//  VARIABLES
+let textInput = document.getElementById('search'),
+    names = document.querySelectorAll('.collection-item'),
+    heading = document.querySelectorAll('.collection-header');
 
-
+// EVENT LISTENERS
 textInput.addEventListener('input', filterList);
 
+// FUNCTIONS
 function filterList() {
     let inputValue = textInput.value.toUpperCase();
     inputLetter =  textInput.value.toUpperCase().substring(0,1);
@@ -32,5 +34,8 @@ function filterList() {
         else {
             item.parentElement.style.display = 'none';
         }
+    }
+    if(this.value === '') {
+        location.reload();
     }
 }
