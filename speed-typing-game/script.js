@@ -1,6 +1,6 @@
 /*  TODO:
     - show high score, store it in local storage
-    - add a difficulty level options (time left = 5s/3s/2s)
+    - add a difficulty level select-options (time left = 5s/3s/2s)
     - load random words from an API
  */
 
@@ -12,7 +12,13 @@
 'empathy', 'concert', 'patience', 'humor', 'resilience', 'confidence',
 'consistency'];
 
-let timeCount = 6, scoreCount = 0, isPlaying, wordDisplayed;
+const levels = {
+    easy: 5,
+    medium: 3,
+    hard: 2
+};
+const curretLevel = levels.easy;
+let timeCount = levels.easy + 1, scoreCount = 0, isPlaying, wordDisplayed;
 
 let currentWord  = document.querySelector('#current-word'),
     inputWord = document.querySelector('#input-word'),
@@ -20,7 +26,7 @@ let currentWord  = document.querySelector('#current-word'),
     timeLeft = document.querySelector('#time-left'),
     score = document.querySelector('#score'),
     message = document.querySelector('#message');
- 
+
 // EVENT LISTENERS
 window.addEventListener('load', init);
 inputWord.addEventListener('input', startMatch);
@@ -28,6 +34,7 @@ inputWord.addEventListener('input', startMatch);
 
 // FUCNTIONS
 function init() { 
+    time.textContent = curretLevel;
     showWord();
     // call the countdown function every second
     setInterval(countdown, 1000);
@@ -63,7 +70,7 @@ function startMatch() {
         this.value = ''
         scoreCount++;
         score.textContent = scoreCount;
-        timeCount = 6; // will reset the clock, so the countdown starts from 5 again
+        timeCount = curretLevel + 1; // will reset the clock to start the countdown again
         showWord();
     }
 }
