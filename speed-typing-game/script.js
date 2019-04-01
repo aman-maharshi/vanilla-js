@@ -12,7 +12,7 @@
 'empathy', 'concert', 'patience', 'humor', 'resilience', 'confidence',
 'consistency'];
 
-let timeCount = 5, scoreCount = 0, isPlaying, wordDisplayed;
+let timeCount = 6, scoreCount = 0, isPlaying, wordDisplayed;
 
 let currentWord  = document.querySelector('#current-word'),
     inputWord = document.querySelector('#input-word'),
@@ -41,25 +41,29 @@ function showWord() {
 }
 function countdown() {
     if (timeCount > 0) {
-        timeLeft.textContent = timeCount;
+        // console.log(timeCount);
         timeCount--;   
+        timeLeft.textContent = timeCount;
     } else if(timeCount === 0) {
         isPlaying = false;
     }
 }
 function checkStatus() {
     if(!isPlaying && timeCount === 0) {
-        message.textContent = 'Game Over!!'
+        message.textContent = 'Time Up!!';
+        scoreCount = 0
+        message.className = 'mt-3 text-danger';
     }
 }
 function startMatch() {
     if (this.value === wordDisplayed) {
         isPlaying = true;
         message.textContent  = 'Correct!!'
+        message.className = 'mt-3 text-success'
         this.value = ''
         scoreCount++;
         score.textContent = scoreCount;
-        timeCount = 5; // will reset the clock, so the countdown starts from 5 again
+        timeCount = 6; // will reset the clock, so the countdown starts from 5 again
         showWord();
     }
 }
