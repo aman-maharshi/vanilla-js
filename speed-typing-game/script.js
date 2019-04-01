@@ -23,6 +23,7 @@ let currentWord  = document.querySelector('#current-word'),
  
 // EVENT LISTENERS
 window.addEventListener('load', init);
+inputWord.addEventListener('input', startMatch);
 
 
 // FUCNTIONS
@@ -40,14 +41,25 @@ function showWord() {
 }
 function countdown() {
     if (timeCount > 0) {
+        timeLeft.textContent = timeCount;
         timeCount--;   
     } else if(timeCount === 0) {
         isPlaying = false;
     }
-    timeLeft.textContent = timeCount;
 }
 function checkStatus() {
     if(!isPlaying && timeCount === 0) {
         message.textContent = 'Game Over!!'
+    }
+}
+function startMatch() {
+    if (this.value === wordDisplayed) {
+        isPlaying = true;
+        message.textContent  = 'Correct!!'
+        this.value = ''
+        scoreCount++;
+        score.textContent = scoreCount;
+        timeCount = 5; // will reset the clock, so the countdown starts from 5 again
+        showWord();
     }
 }
