@@ -1,6 +1,6 @@
 /*  TODO:
-    - show high score, store it in local storage
     - add a difficulty level select-options (time left = 5s/3s/2s)
+    - show high score, store it in local storage
     - load random words from an API
  */
 
