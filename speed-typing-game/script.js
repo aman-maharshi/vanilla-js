@@ -9,7 +9,11 @@
 'workout', 'friendship', 'practice', 'routine', 'morning', 'reading', 
 'books', 'education', 'amour', 'delibrate', 'protein', 'partner',
 'empathy', 'concert', 'patience', 'humor', 'resilience', 'confidence',
-'consistency'];
+'consistency', 'appreciation', 'literature', 'meaning', 'humble',
+'province', 'flight', 'alchemy', 'intense', 'adorable', 'swoon', 'stunning',
+'sensational', 'provocative', 'apocalypse', 'compliance', 'meticulous',
+'replicate', 'relentless', 'pursuit', 'proactive', 'astounding',
+'delightful', 'legitimate', 'mesmerizing', 'polarizing', 'validate'];
 
 const levels = {
     easy: 5,
