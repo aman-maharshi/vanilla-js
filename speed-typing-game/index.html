@@ -16,6 +16,14 @@
             <div class="col-md-6 mx-auto"> <!-- auto margin - to center content -->
                 <p>Type the following word in <span id="seconds" class="text-warning"></span> seconds: </p>
                 <h2 id="current-word" class="display-2 mb-4"></h2> <!-- increased font size -->
+                <div class="form-group col-md-4 mx-auto">
+                    <label for="difficulty">Difficulty:</label>
+                    <select class="form-control" id="difficulty">
+                      <option>Easy</option>
+                      <option>Medium</option>
+                      <option>Hard</option>
+                    </select>
+                  </div>
                 <input id="input-word" type="text" class="form-control form-control-lg" placeholder="Start typing ..." autofocus>
                 <h4 id="message" class="mt-3 text-warning"></h4> 
 
@@ -37,13 +45,16 @@
                     <div class="col-md-10 mx-auto">
                         <div class="card card-body bg-secondary">
                             <h5>Instructions</h5>
-                            <p>Type each word in the given amount of time to score. To play again, just type the current word.</p>
+                            <p>Type each word in the given amount of time to score. To play again, just type the current word. Your score will reset.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <footer>
+        <p class="text-center small mt-3 text-muted">Coded by <a href="https://github.com/aman-maharshi">Aman Maharshi</a></p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
