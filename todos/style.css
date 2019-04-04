@@ -23,3 +23,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+@media (max-height: 650px) {
+    footer {
+        display: none;
+    }
+}
