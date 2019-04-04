@@ -1,7 +1,6 @@
 /*
     TODO:
-    - save items to local storage
-    - load list items from local storage on page load/ refresh
+    - load todo items from local storage on page load/ refresh
 */
 
 // VARIABLES
@@ -20,7 +19,11 @@ todoSearch.addEventListener('keyup', searchItem);
 // FUNCTIONS
 function removeItem(e) { 
     if(e.target.classList.contains('btn'))  {
-        e.target.parentElement.remove();
+        let item = e.target.parentElement;
+        // remove item from local storage
+        removeFromLocalStorage(item);
+        // remove item from dom
+        item.remove();
     }
 }
 
@@ -77,4 +80,17 @@ function getFromLocalStorage() {
         items = JSON.parse(items);
     }
     return items;
+}
+
+function removeFromLocalStorage(todo) {
+    let liValue = todo.firstChild.textContent
+    let storageArray = getFromLocalStorage();
+    console.log(liValue);
+    console.log(storageArray);
+    storageArray.forEach(function(item, index) {
+        if(item === liValue) {
+            storageArray.splice(index,1);
+            localStorage.setItem('todo', JSON.stringify(storageArray));
+        }
+    })
 }
