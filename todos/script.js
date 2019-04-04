@@ -44,6 +44,8 @@ function addTodo(e) {
         todoItems.appendChild(li);
         todoForm.reset();
     }
+
+    addToLocalStorage(todo);
 }
 
 function searchItem() {
@@ -58,4 +60,21 @@ function searchItem() {
             items[i].style.display = 'none';
         }
     }
+}
+
+function addToLocalStorage(todo) {
+    let storageItems = getFromLocalStorage();
+    storageItems.push(todo);
+    localStorage.setItem('todo', JSON.stringify(storageItems));
+}
+
+function getFromLocalStorage() {
+    let items = localStorage.getItem('todo')
+    if(items === null) {
+        items = [];
+    }
+    else {
+        items = JSON.parse(items);
+    }
+    return items;
 }
