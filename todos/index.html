@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Aman Maharshi">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>toDos</title>
+</head>
+<body>
+    <header class="bg-dark text-white p-4 mb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-8">
+                    <h1>toDos</h1>
+                </div>
+                <div class="col-md-6 col-lg-4 align-self-center"><!-- search bar vertically aligned center   -->
+                    <input type="text" id="todo-search" class="form-control" placeholder="Search items...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card card-body bg-light">
+            <h3>What can you do today - </h3>
+            <form id="todo-form" class="form-inline mb-2">
+                <input type="text" id="todo-input" class="form-control col-md-6 mr-2">
+                <input type="submit" id="todo-submit" class="btn btn-dark" value="Add">
+            </form>
+        </div>
+        <div class="card card-body bg-light mt-2">
+            <h3>My List - </h3>
+            <ul id="todo-items" class="list-group">
+                <li class="list-group-item">Practice Guitar <button class="btn btn-dark btn-sm float-right">X</button></li>
+                <li class="list-group-item">Practice Web Programming <button class="btn btn-dark btn-sm float-right">X</button></li>
+                <li class="list-group-item">Go to Gym <button class="btn btn-dark btn-sm float-right">X</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="font-small text-muted">
+        <p class="text-center">Coded by:<a href="https://github.com/aman-maharshi"> Aman Maharshi</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
