@@ -1,6 +1,7 @@
 /*
     TODO:
-    - load todo items from local storage on page load/ refresh
+    - load todo items from local storage on page reload
+    - make - "My list -" card hidden when no todo items present
 */
 
 // VARIABLES
@@ -14,6 +15,7 @@ let todoItems = document.getElementById('todo-items'),
 todoItems.addEventListener('click', removeItem);
 todoForm.addEventListener('submit', addTodo);
 todoSearch.addEventListener('keyup', searchItem); 
+document.addEventListener('DOMContentLoaded', loadItems);
 
 
 // FUNCTIONS
@@ -22,7 +24,7 @@ function removeItem(e) {
         let item = e.target.parentElement;
         // remove item from local storage
         removeFromLocalStorage(item);
-        // remove item from dom
+        // remove item from DOM
         item.remove();
     }
 }
@@ -47,7 +49,7 @@ function addTodo(e) {
         todoItems.appendChild(li);
         todoForm.reset();
     }
-
+    // append the todo item to local storage array
     addToLocalStorage(todo);
 }
 
@@ -83,7 +85,7 @@ function getFromLocalStorage() {
 }
 
 function removeFromLocalStorage(todo) {
-    let liValue = todo.firstChild.textContent
+    let liValue = todo.firstChild.textContent;
     let storageArray = getFromLocalStorage();
     console.log(liValue);
     console.log(storageArray);
@@ -92,5 +94,24 @@ function removeFromLocalStorage(todo) {
             storageArray.splice(index,1);
             localStorage.setItem('todo', JSON.stringify(storageArray));
         }
+    })
+}
+// load todo items from local storage
+function loadItems() {
+    todoInput.focus();
+    let items = getFromLocalStorage();
+    items.forEach(function(item){
+        // create li
+        let li = document.createElement('li');
+        li.className = 'list-group-item';
+        li.textContent = item;
+        
+        //create 'X' button
+        let btn = document.createElement('button');
+        btn.className = 'btn btn-dark btn-sm float-right';
+        btn.textContent = 'X';
+
+        li.appendChild(btn);
+        todoItems.appendChild(li);
     })
 }
