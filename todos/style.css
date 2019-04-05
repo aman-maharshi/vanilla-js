@@ -3,18 +3,32 @@
 body {
     font-family: 'Karla', sans-serif;
 }
-.col-md-6 {
-    /* border: 1px dotted lightcoral; */
-}
-.col-lg-4, .col-lg-8 {
-    /* border: 1px dotted lightblue; */
-}
-.container {
-    /* border: 1px dashed lightgreen; */
-}
 @media (max-width: 575px) {
     input[type="submit"] {
         margin-top: 1em;
         width: 20%;
     }
+}   
+@media (min-width: 1000px) {
+    input[type="submit"] {
+        width: 10%;
+    }
+}
+h3 {
+    font-size: 1.4rem;
+}
+#todo-items {
+    max-height: 47vh;
+    overflow-y: scroll;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: 770px) {
+    footer {
+        display: none;
+    }
+    
 }
