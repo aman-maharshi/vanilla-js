@@ -1,7 +1,6 @@
 /*
     TODO:
-    - load todo items from local storage on page reload
-    - make - "My list -" card hidden when no todo items present
+    - make - "My list -" card hidden when no todo items are in Local Storage
 */
 
 // VARIABLES
@@ -48,9 +47,10 @@ function addTodo(e) {
         // appending the todo item to the list
         todoItems.appendChild(li);
         todoForm.reset();
+        
+        // append the todo item to local storage array
+        addToLocalStorage(todo);
     }
-    // append the todo item to local storage array
-    addToLocalStorage(todo);
 }
 
 function searchItem() {
@@ -101,17 +101,19 @@ function loadItems() {
     todoInput.focus();
     let items = getFromLocalStorage();
     items.forEach(function(item){
-        // create li
-        let li = document.createElement('li');
-        li.className = 'list-group-item';
-        li.textContent = item;
-        
-        //create 'X' button
-        let btn = document.createElement('button');
-        btn.className = 'btn btn-dark btn-sm float-right';
-        btn.textContent = 'X';
+        if(item != ""){
+            // create li
+            let li = document.createElement('li');
+            li.className = 'list-group-item';
+            li.textContent = item;
+            
+            //create 'X' button
+            let btn = document.createElement('button');
+            btn.className = 'btn btn-dark btn-sm float-right';
+            btn.textContent = 'X';
 
-        li.appendChild(btn);
-        todoItems.appendChild(li);
+            li.appendChild(btn);
+            todoItems.appendChild(li);
+        }
     })
 }
