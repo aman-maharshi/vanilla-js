@@ -5,8 +5,10 @@ Current Features:
 * Add todo items
 * Remove selected item
 * Search through the todo list
+* Save todo items to loacal storage
+* Load items from local storage on page load
 
 Features to add:
-*  Store the todo items to loacal storage
-* Load items from local storage
+* Edit a list item without removing it
+
 

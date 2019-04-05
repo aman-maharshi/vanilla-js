@@ -1,8 +1,3 @@
-/*
-    TODO:
-    - make - "My list -" card hidden when no todo items are in Local Storage
-*/
-
 // VARIABLES
 let todoItems = document.getElementById('todo-items'),
     todoInput = document.getElementById('todo-input'),
@@ -50,6 +45,7 @@ function addTodo(e) {
         
         // append the todo item to local storage array
         addToLocalStorage(todo);
+        checkLocalStorage();
     }
 }
 
@@ -87,19 +83,19 @@ function getFromLocalStorage() {
 function removeFromLocalStorage(todo) {
     let liValue = todo.firstChild.textContent;
     let storageArray = getFromLocalStorage();
-    console.log(liValue);
-    console.log(storageArray);
     storageArray.forEach(function(item, index) {
         if(item === liValue) {
             storageArray.splice(index,1);
             localStorage.setItem('todo', JSON.stringify(storageArray));
         }
+        checkLocalStorage();
     })
 }
 // load todo items from local storage
 function loadItems() {
     todoInput.focus();
     let items = getFromLocalStorage();
+    checkLocalStorage();
     items.forEach(function(item){
         if(item != ""){
             // create li
@@ -115,5 +111,14 @@ function loadItems() {
             li.appendChild(btn);
             todoItems.appendChild(li);
         }
-    })
+    });
+}
+function checkLocalStorage() {
+    let arr = getFromLocalStorage();
+    if(arr.length != 0) {
+        todoItems.parentElement.style.display = 'block';
+    }
+    else {
+        todoItems.parentElement.style.display = 'none';
+    }
 }
