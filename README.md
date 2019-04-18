@@ -1,6 +1,7 @@
 # Vanilla Javascript Projects
 
-*below are the links to each project, hosted with github pages*
+> Below are the links to all the Projects, hosted with GitHub Pages
+
 
 
 1. [toDos](https://aman-maharshi.github.io/vanilla-js/todos/)
