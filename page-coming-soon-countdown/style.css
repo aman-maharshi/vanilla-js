@@ -1,0 +1,53 @@
+    
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+    font-family: Lato, sans-serif;
+    background: lightgray;
+    margin: 0;
+}
+
+
+.landing {
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative; /* overlay will be positioned absolute*/
+    color: white;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+}
+.logo {
+    opacity: 0.8;
+    border-radius: 1em;
+    margin-top: 4em;
+}
+h1 {
+    font-size: 4rem;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+.countdown {
+    font-size: 2rem;
+}
+@media (max-width: 600px) {
+    .logo {
+        height: 200px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+}
