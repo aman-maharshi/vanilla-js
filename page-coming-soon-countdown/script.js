@@ -27,4 +27,12 @@ const interval = setInterval(function() {
         <div>${sec} <p class="sub">seconds</p></div>
     `;
 
+    if (days <= 0) {
+        // stop countdown
+        clearInterval(interval);
+        element.previousElementSibling.textContent = "";
+        element.textContent = "Launch Date Passed";
+        element.style.color = "cyan";
+    }
+
 }, 1000);
