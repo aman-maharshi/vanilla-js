@@ -1,4 +1,6 @@
-# toDos
+> Click on the link below to view the App
+
+# [toDos](https://aman-maharshi.github.io/vanilla-js/todos)
 ### simple todo list app with a lot of functionalities
 
 Current Features:
