@@ -5,44 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Aman Maharshi">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>My Books</title>
 </head>
 <body>
-  <div class="container">
-      <h1>My Books</h1>
-      <form id="books-form">
-          <div class="form-row">
-              <label for="title">Title</label>
-              <input type="text" id="title">
-          </div>
-          <div class="form-row">
-            <label for="author">Author</label>
-            <input type="text" id="author">
+    <div class="container mt-4">
+        <h1 class="text-center"><i class="fas fa-book-reader mr-4 text-success"></i>My Books</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="book-form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" class="form-control">
+                    </div>
+                    <input type="submit" value="Add Book" class="btn btn-primary btn-block">
+                </form>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-stripped mt-4">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="book-list">
+        
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <input type="submit" value="Add Book">
-        <span id="prompt"></span>
-      </form>
-  </div>
-  <table>
-      <thead>
-          <tr>
-              <th>Title</th>
-              <th>Author</th>
-              <th></th>
-          </tr>
-      </thead>
-      <tbody id="book-list">
+    </div>
+ 
 
-          <!-- <tr>
-              <td>Catcher in the Rye</td>
-              <td>J.D. Salinger</td>
-          </tr> -->
-      </tbody>
-  </table>
-
-    <script src="script.js"></script>
+    <!--
+        TODO: change the display to 2 coloumn layout on larger devices
+    -->
+    
+    <script src="app.js"></script>
 </body>
 </html>
