@@ -4,7 +4,8 @@ let form = document.querySelector('#book-form'),
     author = document.querySelector('#author'),
     tableBody = document.querySelector('#book-list');
 
-let error = false;
+let error = true; // initially both the fields are blank
+
 
 //  EVENT LISTENERS
 title.addEventListener('blur', validation);
@@ -12,8 +13,8 @@ author.addEventListener('blur', validation);
 form.addEventListener('submit', addBookToList);
 tableBody.addEventListener('click', removeBook);
 
-//  FUNCTIONS
 
+//  FUNCTIONS
 function validation() {
     if(this.value !=   '') {
         this.className = 'form-control is-valid';
@@ -26,6 +27,7 @@ function validation() {
         this.nextElementSibling.textContent = 'Field can\'t be left blank';
     }
 }
+
 function addBookToList(e) {
     e.preventDefault();
     if (error == false) {
@@ -41,10 +43,10 @@ function addBookToList(e) {
         tableBody.appendChild(tr);
         
         form.reset();
-        title.focus();
         title.className = 'form-control';
         author.className = 'form-control';
-        
+
+        addToLocalStorage(bookName, bookAuthor);
     }
 }
 
@@ -55,3 +57,25 @@ function removeBook(e) {
     }
 
 }
+
+function getFromLocalStorage() {
+    if (localStorage.getItem('books') == null) {
+        localStorage.setItem('books', '[]');
+        return JSON.parse(localStorage.getItem('books'));
+    }
+    else {
+        return JSON.parse(localStorage.getItem('books'));
+    }
+}
+
+function addToLocalStorage(bookName, authorName) {
+    let obj = {
+        book: bookName,
+        author: authorName
+    }
+    let ls = getFromLocalStorage();
+    ls.push(obj);
+    localStorage.setItem('books', JSON.stringify(ls));   
+}
+
+
