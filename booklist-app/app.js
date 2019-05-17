@@ -10,6 +10,7 @@ let error = false;
 title.addEventListener('blur', validation);
 author.addEventListener('blur', validation);
 form.addEventListener('submit', addBookToList);
+tableBody.addEventListener('click', removeBook);
 
 //  FUNCTIONS
 
@@ -28,6 +29,29 @@ function validation() {
 function addBookToList(e) {
     e.preventDefault();
     if (error == false) {
+        let bookName = title.value,
+            bookAuthor = author.value;
+        
+        let tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${bookName}</td>
+            <td>${bookAuthor}</td>
+            <td><a href="#" class="btn btn-danger btn-sm">X</a></td>
+        `
+        tableBody.appendChild(tr);
+        
+        form.reset();
+        title.focus();
+        title.className = 'form-control';
+        author.className = 'form-control';
         
     }
+}
+
+function removeBook(e) {
+    // console.log(e.target);
+    if(e.target.classList.contains('btn-danger')) {
+        e.target.parentElement.parentElement.remove();
+    }
+
 }
