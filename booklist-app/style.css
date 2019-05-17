@@ -1,0 +1,15 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: 770px) {
+    footer {
+        display: none;
+    }
+}
+@media (max-height: 700px) {
+    footer {
+        display: none;
+    }
+} 
