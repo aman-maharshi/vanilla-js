@@ -42,6 +42,15 @@ class UI {
         element.innerHTML = template;
         tbody.appendChild(element);
     }
+    static showError(message) {
+        let div = document.createElement('div');
+        div.className = 'alert alert-danger';
+        div.appendChild(document.createTextNode(message));
+        document.getElementById('alert').appendChild(div);
+        setTimeout(function() {
+            document.getElementById('alert').remove();
+        }, 1500)
+    }
 }
 
 // Storage Class: Handles Storage
@@ -60,10 +69,15 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
     const bookName = document.getElementById('title').value;
     const bookAuthor = document.getElementById('author').value;
 
-    // instantiating a new book
-    const newBook = new Book(bookName, bookAuthor);
-    UI.addBookToList(newBook);
-    document.getElementById('book-form').reset();
+    if (bookName == '' || bookAuthor == '') {
+        UI.showError('All fields are mandatory');
+    }
+    else {
+        // instantiating a new book
+        const newBook = new Book(bookName, bookAuthor);
+        UI.addBookToList(newBook);
+        document.getElementById('book-form').reset();
+    }
 });
 
 // Event: Remove a Book
