@@ -48,7 +48,7 @@ class UI {
         div.appendChild(document.createTextNode(message));
         document.getElementById('alert').appendChild(div);
         setTimeout(function() {
-            document.getElementById('alert').remove();
+            document.getElementById('alert').textContent = '';
         }, 1500)
     }
 }
@@ -70,7 +70,7 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
     const bookAuthor = document.getElementById('author').value;
 
     if (bookName == '' || bookAuthor == '') {
-        UI.showError('All fields are mandatory');
+        UI.showError('Invalid Field');
     }
     else {
         // instantiating a new book
