@@ -1,10 +1,9 @@
 /*
     CLASSES
 ---------------------------------------------*/
-
 // Book Class: Represent a Book
 class Book {
-    constructor() {
+    constructor(title, author) {
         this.title = title;
         this.author = author;
     }
@@ -38,12 +37,12 @@ class UI {
         let template = `
             <td>${book.title}</td>
             <td>${book.author}</td>
+            <td><a href="#" class="btn btn-danger btn-sm">X</a></td>
         `;
         element.innerHTML = template;
         tbody.appendChild(element);
     }
 }
-UI.displayBooks();
 
 // Storage Class: Handles Storage
 
@@ -53,7 +52,23 @@ UI.displayBooks();
 ---------------------------------------------*/
 
 // Event: Display Books
+document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 // Event: Add a Book 
+document.getElementById('book-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const bookName = document.getElementById('title').value;
+    const bookAuthor = document.getElementById('author').value;
+
+    // instantiating a new book
+    const newBook = new Book(bookName, bookAuthor);
+    UI.addBookToList(newBook);
+    document.getElementById('book-form').reset();
+});
 
 // Event: Remove a Book
+document.getElementById('book-list').addEventListener('click', function(e) {
+    if(e.target.classList.contains('btn-danger')) {
+        e.target.parentElement.parentElement.remove();
+    }
+})
