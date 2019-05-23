@@ -12,6 +12,7 @@ title.addEventListener('blur', validation);
 author.addEventListener('blur', validation);
 form.addEventListener('submit', addBookToList);
 tableBody.addEventListener('click', removeBook);
+document.addEventListener('DOMContentLoaded', init);
 
 
 //  FUNCTIONS
@@ -81,4 +82,15 @@ function addToLocalStorage(bookName, authorName) {
     localStorage.setItem('books', JSON.stringify(ls));   
 }
 
-
+function init() {
+    let books = JSON.parse(localStorage.getItem('books'));
+    books.forEach(function(book) {
+        let tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${book.author}</td>
+            <td>${book.book}</td>
+            <td><a href="#" class="btn btn-danger btn-sm">X</a></td>
+        `
+        tableBody.appendChild(tr);
+    })
+}
