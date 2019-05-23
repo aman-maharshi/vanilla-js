@@ -54,12 +54,22 @@ function addBookToList(e) {
 function removeBook(e) {
     // console.log(e.target);
     if(e.target.classList.contains('btn-danger')) {
-        e.target.parentElement.parentElement.remove();
-        /*
-            TODO: add feature to remove the target element from local storage
-        */
+        // console.log(e.target.parentElement.parentElement.firstElementChild.textContent)
+        // remvoe from Local Storage
+        removeBookFromLocalStorage(e.target.parentElement.parentElement.firstElementChild.textContent);
+        //remove from DOM
+        e.target.parentElement.parentElement.remove();   
     }
+}
 
+function removeBookFromLocalStorage(name) {
+    let books = JSON.parse(localStorage.getItem('books'));
+    books.forEach(function(book, index) {
+        if(book.book === name) {
+            books.splice(index, 1)
+        }
+    })
+    localStorage.setItem('books', JSON.stringify(books));
 }
 
 function getFromLocalStorage() {
@@ -83,12 +93,12 @@ function addToLocalStorage(bookName, authorName) {
 }
 
 function init() {
-    let books = JSON.parse(localStorage.getItem('books'));
+    let books = getFromLocalStorage();
     books.forEach(function(book) {
         let tr = document.createElement('tr');
         tr.innerHTML = `
-            <td>${book.author}</td>
             <td>${book.book}</td>
+            <td>${book.author}</td>
             <td><a href="#" class="btn btn-danger btn-sm">X</a></td>
         `
         tableBody.appendChild(tr);
