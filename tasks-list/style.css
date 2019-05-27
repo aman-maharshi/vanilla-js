@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Martel+Sans&display=swap');
+:root {
+    --cream: #e9ece5;
+    --black: #272623;
+    --cyan: #56bba7;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--black);
+    font-family: Martel Sans, sans-serif;
+}
+.card {
+    box-shadow: 0px 2px 2px 0px gray;
+    margin-bottom: 1em;
+    max-width: 800px;
+    margin: auto;
+    padding: 1em;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    font-family: Martel Sans, sans-serif;
+    font-size: 1em;
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 400px;
+    height: 40px;
+}
+input[type=submit] {
+    border: none;
+    width: 100px;
+    margin-top: 10px;
+    padding-top: 7px;
+    cursor: pointer;
+    font-size: 0.9em;
+    background: none;
+    color: var(--black);
+    text-transform: uppercase;
+    border: 1px solid gray;
+}
+input[type=submit]:hover {
+    border-color: black;
+    color: var(--cyan);
+}
