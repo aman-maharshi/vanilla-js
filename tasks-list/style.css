@@ -3,6 +3,10 @@
     --cream: #e9ece5;
     --black: #272623;
     --cyan: #56bba7;
+    --coral: rgb(255, 76, 10);
+    --white: #fff;
+    --white-dark: #f8f8f8;
+
 }
 body {
     margin: 0;
@@ -45,4 +49,41 @@ input[type=submit] {
 input[type=submit]:hover {
     border-color: black;
     color: var(--cyan);
+}
+input[type=submit]:active {
+    /* color: var(--black); */
+    background: black;
+}
+#filter {
+    height: 30px;
+}
+#clear-all:hover {
+    color: var(--coral);
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    padding: 5px;
+    border: 1px solid lightgray;
+    position: relative;
+}
+li:nth-child(2n) {
+    background-color:var(--white);
+}
+li:nth-child(2n) {
+    background-color:var(--white-dark);
+}
+.cross {
+    color: coral;
+    font-size: 1.3em;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    transition: transform 0.5s ease;
+}
+.cross:hover {
+    color: red;
+    transform: rotate(-90deg);
 }

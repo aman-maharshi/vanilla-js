@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Task List</title>
+    <title>Task Manager</title>
 </head>
 <body>
     <div class="wrapper">
         <div class=card>
-            <h2>Tasks List</h2>
+            <h2>Task Manager</h2>
             <form id="task-form">
-                <input type="text" placeholder="Enter a task">
+                <input type="text" id="task" placeholder="Enter a task">
                 <input type="submit" value="Add Task">
             </form>
         </div>
         <div class=card>
-
+            <h2>My Tasks</h2>
+            <input type="text" id="filter" placeholder="Search">
+            <ul id="my-tasks">
+                <!-- <li>Go to Gym <span class="cross">&#10006</span></li> -->
+            </ul>
+            <input type="submit" value="Clear All" id="clear-all">
         </div>
         <div class=card>
 
