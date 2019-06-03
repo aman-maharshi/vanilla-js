@@ -11,6 +11,7 @@ form.addEventListener('submit', submitForm);
 taskList.addEventListener('click', removeTask);
 clearAll.addEventListener('click', removeAllTasks);
 filter.addEventListener('input', filterTasks);
+document.addEventListener('DOMContentLoaded', init);
 
 //  FUNCTIONS
 function submitForm (e) {
@@ -21,6 +22,7 @@ function submitForm (e) {
         span.classList = 'cross'
         span.innerHTML = `&#10006`;
         li.textContent = task.value;
+        saveTaskToLocalStorage(task.value);
         li.appendChild(span);
         taskList.appendChild(li);
         task.value = '';
@@ -33,6 +35,14 @@ function submitForm (e) {
 function removeTask(e) {
     if(e.target.classList.contains('cross')) {
         e.target.parentElement.remove();
+        let liValue = e.target.parentElement.firstChild.textContent;
+        let items = getFromLocalStorage();
+        items.forEach((item, index) => {
+            if(item == liValue) {
+                items.splice(index, 1);
+            }
+            localStorage.setItem('tasks', JSON.stringify(items));
+        })
     }
 }
 function removeAllTasks() {
@@ -40,6 +50,7 @@ function removeAllTasks() {
     while(taskList.firstChild) {
         taskList.removeChild(taskList.firstChild);
     }
+    localStorage.setItem('tasks', '[]');
 }
 function filterTasks(e) {
     let input = e.target.value.toUpperCase();
@@ -53,6 +64,33 @@ function filterTasks(e) {
         }
     })
 }
-/*
-    TODO: add Local Storage persistent functionality
-*/
+function getFromLocalStorage() {
+   let items = localStorage.getItem('tasks')
+   if(items == null) {
+       localStorage.setItem('tasks', '[]');
+       items = [];
+   }
+   else {    
+       items = JSON.parse(localStorage.getItem('tasks'));  
+   }
+   return items;
+}
+function saveTaskToLocalStorage(task) {
+    let items = getFromLocalStorage();
+    items.push(task);
+    localStorage.setItem('tasks', JSON.stringify(items));
+}
+function init() {
+    let items = getFromLocalStorage()
+    items.forEach( (todo) => {
+        let li = document.createElement('li');
+        let span = document.createElement('span');
+        span.classList = 'cross'
+        span.innerHTML = `&#10006`;
+        li.textContent = todo;
+        li.appendChild(span);
+        taskList.appendChild(li);
+        task.value = '';
+        task.focus();
+    })
+}
