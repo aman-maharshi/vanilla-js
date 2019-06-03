@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Martel+Sans&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Martel+Sans&display=swap');
 :root {
     --cream: #e9ece5;
     --black: #272623;
@@ -27,8 +27,8 @@ form {
     flex-direction: column;
 }
 input {
-    /* font-family: Martel Sans, sans-serif; */
-    font-family: sans-serif;
+    font-family: Martel Sans, sans-serif;
+    /* font-family: sans-serif; */
     font-size: 1em;
     padding-left: 5px;
     padding-top: 5px;

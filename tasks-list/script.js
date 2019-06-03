@@ -53,3 +53,6 @@ function filterTasks(e) {
         }
     })
 }
+/*
+    TODO: add Local Storage persistent functionality
+*/
