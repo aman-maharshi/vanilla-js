@@ -1,0 +1,40 @@
+* {
+    font-family: 'Franklin Gothic Medium', sans-serif
+}
+body {
+    margin: 0;
+}
+.card {
+    background-color:rgb(165, 236, 165);
+    padding: 1em;
+    max-width: 800px;
+    margin: auto;
+}
+form {
+    display: flex;
+    /* border: 1px solid pink; */
+}
+form > * {
+    font-size: 1.5em;
+}
+input[type="number"] {
+    width: 120px;
+}
+input[type="submit"] {
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 7px 14px;
+    margin-left: 1em;
+    text-transform: uppercase;
+}
+input[type="submit"]:hover {
+    border-color: black;
+}
+#info {
+    color: red;
+    font-size: 0.9em;
+    padding: 5px;
+    height: 15px;
+}
