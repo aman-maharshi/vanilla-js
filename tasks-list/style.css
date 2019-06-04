@@ -6,12 +6,14 @@
     --coral: rgb(255, 76, 10);
     --white: #fff;
     --white-dark: #f8f8f8;
-
+}
+* {
+    box-sizing: border-box;
 }
 body {
     margin: 0;
     padding: 0;
-    background: var(--cream);
+    background: rgba(255, 198, 206, 0.589);
     color: var(--black);
     font-family: Martel Sans, sans-serif;
 }
@@ -28,7 +30,6 @@ form {
 }
 input {
     font-family: Martel Sans, sans-serif;
-    /* font-family: sans-serif; */
     font-size: 1em;
     padding-left: 5px;
     padding-top: 5px;
@@ -46,17 +47,14 @@ input[type=submit] {
     color: var(--black);
     text-transform: uppercase;
     border: 1px solid gray;
+    border-radius: 5px;
 }
 input[type=submit]:hover {
     border-color: black;
     color: var(--cyan);
 }
 input[type=submit]:active {
-    /* color: var(--black); */
     background: black;
-}
-#filter {
-    height: 30px;
 }
 #clear-all:hover {
     color: var(--coral);
@@ -67,13 +65,13 @@ ul {
 }
 li {
     padding: 5px;
-    border: 1px solid lightgray;
     position: relative;
 }
-li:nth-child(2n) {
+li:nth-child(even) {
     background-color:var(--white);
+
 }
-li:nth-child(2n) {
+li:nth-child(odd) {
     background-color:var(--white-dark);
 }
 .cross {
@@ -88,4 +86,34 @@ li:nth-child(2n) {
 .cross:hover {
     color: red;
     transform: rotate(-90deg);
+}
+footer {
+    background-color:lightgray;
+    padding: 1em;
+    text-align: center;
+}
+footer p {
+    font-size: 0.95rem;
+    color: gray;
+}
+footer a {
+    text-decoration: none;
+    color: gray;
+}
+footer a:hover {
+    color: var(--cyan);
+}
+/*
+    STICKY FOOTER
+*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -100px;
+}
+footer {
+    height: 100px;
 }
