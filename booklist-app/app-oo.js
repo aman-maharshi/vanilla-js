@@ -1,4 +1,6 @@
-
+/*
+    ISSUE: After removing a item from the table, when we add a next book, it shows undefined for the bookTitle!!!
+*/
 //  CLASSES
 class Book {
     constructor(title, author) {
@@ -24,12 +26,12 @@ class UI {
         alertDiv.className = nameOfClass;
         setTimeout(() => {
             alertDiv.style.display = 'none';
-            bookTitle.focus();
         }, 1500)
     }
     removeItem(targetEvent) {
         if(targetEvent.classList.contains('btn-danger')) {
             targetEvent.parentElement.parentElement.remove();
+            updateInterface.showAlert('Book Removed!', 'alert-warning');
         }
     }
 }
@@ -50,12 +52,21 @@ class Storage {
     }
     static displayBooks() {
         const booksArray = Storage.getBooks();
-        booksArray.forEach((obj) => {
-            updateInterface.addBookToTable(obj);
-        });
+        if (booksArray.length != 0) {
+            booksArray.forEach((obj) => {
+                updateInterface.addBookToTable(obj);
+            });
+        }
     }
-    static removeBook() {
-
+    static removeBook(target) {
+        bookTitle = target.parentElement.parentElement.firstChild.textContent;
+        const array = Storage.getBooks();
+        array.forEach((item, index) => {
+            if(bookTitle === item.title) {
+                array.splice(index, 1);
+            }
+        })
+        localStorage.setItem('books', JSON.stringify(array));
     }
 }
 
@@ -69,9 +80,10 @@ let form = document.querySelector('#book-form'),
 //  EVENT LISTENERS
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    const bookName = bookTitle.value,
+    let bookName = bookTitle.value,
           authorName = bookAuthor.value;
 
+    console.log(bookName, authorName);
     const book = new Book(bookName, authorName);
     if (bookName === '' || authorName === '') {
         updateInterface.showAlert('All fields are mandatory!', 'alert-danger');
@@ -84,7 +96,7 @@ form.addEventListener('submit', function(e) {
 });
 tableBody.addEventListener('click', function(e) {
     updateInterface.removeItem(e.target);
-    updateInterface.showAlert('Book Removed!', 'alert-warning');
+    Storage.removeBook(e.target);
 });
 document.addEventListener('DOMContentLoaded', function(){
     Storage.displayBooks();
