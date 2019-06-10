@@ -15,4 +15,15 @@ footer {
 } 
 .alert-danger {
     background: lightcoral;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    color: white;
+    border-radius: 5px;
+}
+.alert-success {
+    background: lightgreen;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    color: white;
+    border-radius: 5px;
 }

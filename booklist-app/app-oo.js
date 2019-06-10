@@ -18,6 +18,16 @@ class UI {
         tableBody.appendChild(tr);
         form.reset();
     }
+    showAlert(message, nameOfClass) {
+        alertDiv.style.display = 'block';
+        alertDiv.textContent = message;
+        alertDiv.className = nameOfClass;
+        setTimeout(() => {
+            alertDiv.style.display = 'none';
+            form.reset();
+        }, 1500)
+
+    }
 }
 
 // DOM  VARIABLES
@@ -36,6 +46,11 @@ function formSubmit(e) {
 
     const book = new Book(bookName, authorName);
     const updateInterface = new UI;
-
-    updateInterface.addBookToTable(book);
+    if (bookName === '' || authorName === '') {
+        updateInterface.showAlert('All fields are mandatory!', 'alert-danger');
+    }
+    else {
+        updateInterface.addBookToTable(book);
+        updateInterface.showAlert('Book Added!', 'alert-success')
+    }
 }
