@@ -24,11 +24,16 @@ class UI {
         alertDiv.className = nameOfClass;
         setTimeout(() => {
             alertDiv.style.display = 'none';
-            form.reset();
+            bookTitle.focus();
         }, 1500)
-
+    }
+    removeItem(targetEvent) {
+        if(targetEvent.classList.contains('btn-danger')) {
+            targetEvent.parentElement.parentElement.remove();
+        }
     }
 }
+const updateInterface = new UI;
 
 // DOM  VARIABLES
 let form = document.querySelector('#book-form'),
@@ -38,14 +43,12 @@ let form = document.querySelector('#book-form'),
     tableBody = document.querySelector('#book-list');
 
 //  EVENT LISTENERS
-form.addEventListener('submit', formSubmit);
-function formSubmit(e) {
+form.addEventListener('submit', function(e) {
     e.preventDefault();
     const bookName = bookTitle.value,
           authorName = bookAuthor.value;
 
     const book = new Book(bookName, authorName);
-    const updateInterface = new UI;
     if (bookName === '' || authorName === '') {
         updateInterface.showAlert('All fields are mandatory!', 'alert-danger');
     }
@@ -53,4 +56,9 @@ function formSubmit(e) {
         updateInterface.addBookToTable(book);
         updateInterface.showAlert('Book Added!', 'alert-success')
     }
-}
+})
+tableBody.addEventListener('click', function(e) {
+    updateInterface.removeItem(e.target);
+    updateInterface.showAlert('Item Removed!', 'alert-warning')
+}) 
+

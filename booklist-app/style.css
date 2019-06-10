@@ -13,17 +13,19 @@ footer {
         display: none;
     }
 } 
+.alert-danger, .alert-success, .alert-warning {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    color: white;
+    border-radius: 5px;
+    color: #333;
+}
 .alert-danger {
     background: lightcoral;
-    margin-bottom: 1em;
-    padding: 0.5em;
-    color: white;
-    border-radius: 5px;
 }
 .alert-success {
-    background: lightgreen;
-    margin-bottom: 1em;
-    padding: 0.5em;
-    color: white;
-    border-radius: 5px;
+    background: rgb(110, 207, 162);
+}
+.alert-warning {
+    background: rgb(218, 218, 127);
 }
