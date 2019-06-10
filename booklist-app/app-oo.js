@@ -35,6 +35,30 @@ class UI {
 }
 const updateInterface = new UI;
 
+class Storage {
+    static getBooks() {
+        const details = localStorage.getItem('books');
+        if(details === null) {
+            localStorage.setItem('books', '[]');   
+        }
+        return JSON.parse(localStorage.getItem('books'));
+    }
+    static addBook(book) {
+        const booksArray = Storage.getBooks();
+        booksArray.push(book);
+        localStorage.setItem('books', JSON.stringify(booksArray));
+    }
+    static displayBooks() {
+        const booksArray = Storage.getBooks();
+        booksArray.forEach((obj) => {
+            updateInterface.addBookToTable(obj);
+        });
+    }
+    static removeBook() {
+
+    }
+}
+
 // DOM  VARIABLES
 let form = document.querySelector('#book-form'),
     bookTitle = document.querySelector('#title'),
@@ -54,11 +78,15 @@ form.addEventListener('submit', function(e) {
     }
     else {
         updateInterface.addBookToTable(book);
-        updateInterface.showAlert('Book Added!', 'alert-success')
+        updateInterface.showAlert('Book Added!', 'alert-success');
+        Storage.addBook(book);
     }
-})
+});
 tableBody.addEventListener('click', function(e) {
     updateInterface.removeItem(e.target);
-    updateInterface.showAlert('Item Removed!', 'alert-warning')
-}) 
+    updateInterface.showAlert('Book Removed!', 'alert-warning');
+});
+document.addEventListener('DOMContentLoaded', function(){
+    Storage.displayBooks();
+})
 
