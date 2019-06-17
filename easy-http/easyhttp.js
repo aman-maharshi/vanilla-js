@@ -5,7 +5,7 @@ class easyHTTP {
     constructor(http) {
         this.http = new XMLHttpRequest();
     }
-
+    // Make an HTTP GET Request
     get(url, callback) {
         this.http.open('GET', url, true);
         this.http.onload = () => {
@@ -19,12 +19,18 @@ class easyHTTP {
  
         this.http.send()
     }
-    // Make an HTTP GET Request
+     // Make an HTTP POST Request
+    post(url, data, callback) {
+        this.http.open('POST', url, true);
+        // here in post we've to set the content type in addition to onload        
+        this.http.setRequestHeader('Content-type', 'application/json');
+        this.http.onload = () => {
+            // no need to check for status as we are posting data
+            callback(null, this.http.responseText);
+        }
 
-    // Make an HTTP POST Request
+        this.http.send(JSON.stringify(data));
 
-    // Make an HTTP PUT Request
-
-    // Make an HTTP DELETE Request
+    }
 }
 
