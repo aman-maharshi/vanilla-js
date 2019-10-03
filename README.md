@@ -10,4 +10,5 @@
 1. [Booklist App](https://aman-maharshi.github.io/vanilla-js/booklist-app/)
 1. [Filterable List](https://aman-maharshi.github.io/vanilla-js/filterable-list/)
 1. [Drag n Drop](https://aman-maharshi.github.io/vanilla-js/drag-n-drop/)
+1. [Typewriter Effect](https://aman-maharshi.github.io/vanilla-js/typewriter-effect/)
 1. [Weight Converter](https://aman-maharshi.github.io/vanilla-js/weight-converter/)
