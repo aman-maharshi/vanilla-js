@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+section {
+    padding: 2rem;
+    height: 50vh;
+    display: flex;
+    background: linear-gradient(0deg, rgb(113, 136, 223),rgb(17, 213, 207));
+    align-items: center;
+}
+section h1 {
+    font-size: 2rem;
+}
+.intro {
+    display: flex;
+}
+.typing {
+    margin-left: 8px;
+    position: relative;
+    color: rgb(16, 16, 160);
+}
+.typing::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    width: 2px;
+    height: 90%;
+    background: black;
+    animation: blink 0.8s ease-in-out infinite; 
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
