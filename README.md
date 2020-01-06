@@ -4,6 +4,7 @@
 
 
 1. [toDos](https://aman-maharshi.github.io/vanilla-js/todos/)
+1. [Weekly Budget App](https://aman-maharshi.github.io/vanilla-js/weekly-budget-app/)
 1. [Speed Typing Lite](https://aman-maharshi.github.io/vanilla-js/speed-typing-game/)
 1. [Booklist App](https://aman-maharshi.github.io/vanilla-js/booklist-app/)
 1. [Drag n Drop](https://aman-maharshi.github.io/vanilla-js/drag-n-drop/)
