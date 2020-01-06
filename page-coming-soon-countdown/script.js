@@ -1,5 +1,5 @@
 const element = document.querySelector('.countdown');
-const launchDate = new Date('Nov 28, 2019 09:00:00');
+const launchDate = new Date('Aug 21, 2020 09:00:00');
 
 // Launch Date (ms)
 const end = launchDate.getTime();
