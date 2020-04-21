@@ -13,4 +13,5 @@
 1. [Weight Converter](https://aman-maharshi.github.io/vanilla-js/weight-converter/)
 1. [Landing Page Coming Soon](https://aman-maharshi.github.io/vanilla-js/page-coming-soon-countdown/)
 1. [Number Guesser](https://aman-maharshi.github.io/vanilla-js/number-guesser/)
+1. [Popup Modal](https://aman-maharshi.github.io/vanilla-js/modal/)
 

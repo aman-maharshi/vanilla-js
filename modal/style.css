@@ -25,6 +25,7 @@ body {
     max-width: 85%;
     background: #EFEEEB;
     padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 h1 {
     color: #202329;
@@ -43,6 +44,7 @@ button {
     padding: 7px 14px;
     border-radius: 25px;
     outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .toggle-modal {
     display: flex;
