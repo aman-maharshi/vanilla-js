@@ -1,22 +1,49 @@
+:root {
+    height: 100%;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #EFEEEB;
+}
 .modal-container {
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 .modal {
     width: 600px;
     max-width: 85%;
-    background: white;
+    background: #EFEEEB;
     padding: 1rem;
+}
+h1 {
+    color: #202329;
+}
+p {
+    color: #40434A;
 }
 button {
     cursor: pointer;
     font-size: 1rem;
+    color: #202329;
+    font-family: 'Playfair Display', serif;
+    border: none;
+    background: #009A9C;
+    color: #EFEEEB;
+    padding: 7px 14px;
+    border-radius: 25px;
+    outline: none;
+}
+.toggle-modal {
+    display: flex;
 }
