@@ -5,6 +5,9 @@ let textInput = document.getElementById('search'),
 
 // EVENT LISTENERS
 textInput.addEventListener('input', filterList);
+document.addEventListener('DOMContentLoaded', ()=> {
+    textInput.focus();
+})
 
 // FUNCTIONS
 function filterList() {
