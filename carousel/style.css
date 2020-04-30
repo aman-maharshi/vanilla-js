@@ -2,4 +2,73 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+button {
+    font-size: 1.25rem;
+    color: rgb(58, 58, 58);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+section {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    padding-top: 5rem;
+}
+.carousel {
+    position: relative;
+    height: 500px;
+    width: 500px;
+}
+.carousel__button {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel__button--left {
+    left: -30px;
+}
+.carousel__button--right {
+    right: -30px;
+}
+.carousel__track-container {
+    height: 100%;
+}
+.carousel__track {
+    list-style-type: none;
+    height: 100%;
+    position: relative;
+}
+.carousel__slide {
+    position: absolute;
+}
+.carousel__nav {
+    text-align: center;
+    padding-top: 10px;
+}
+@media (max-width: 576px) {
+    .carousel {
+        width: 350px;
+        height: 350px;
+    }
+    .carousel__image {
+        width: 100%;
+    }
+}
+footer {
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    color: rgb(58, 58, 58);
+}
+footer a {
+    text-decoration: none;
+    color: rgb(43, 131, 204);
+}
+footer a:hover {
+    color: rgb(25, 79, 122);
 }

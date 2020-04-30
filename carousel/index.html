@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vanilla JS Carousel</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
     <section>
         <div class="carousel">
-            <button class="carousel__button carousel__button--left"><</button>
+            <button class="carousel__button carousel__button--left"><i class="fas fa-chevron-left"></i></button>
             <div class="carousel__track-container">
                 <ul class="carousel__track">
                     <li class="carousel__slide">
@@ -24,12 +26,12 @@
                     </li>
                 </ul>
             </div>
-            <button class="carousel__button carousel__button--right">></button>
+            <button class="carousel__button carousel__button--right"><i class="fas fa-chevron-right"></i></button>
 
             <div class="carousel__nav">
-                <button class="carousel__indicator">0</button>
-                <button class="carousel__indicator">0</button>
-                <button class="carousel__indicator">0</button>
+                <button class="carousel__indicator"><i class="fas fa-circle"></i></button>
+                <button class="carousel__indicator"><i class="far fa-circle"></i></button>
+                <button class="carousel__indicator"><i class="far fa-circle"></i></button>
             </div>
         </div>
     </section>
