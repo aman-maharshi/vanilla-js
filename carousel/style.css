@@ -45,10 +45,6 @@ section {
 .carousel__slide {
     position: absolute;
 }
-.carousel__nav {
-    text-align: center;
-    padding-top: 10px;
-}
 @media (max-width: 576px) {
     .carousel {
         width: 350px;
@@ -57,6 +53,20 @@ section {
     .carousel__image {
         width: 100%;
     }
+}
+.carousel__nav {
+    text-align: center;
+    padding-top: 10px;
+}
+.carousel__indicator {
+    height: 15px;
+    width: 15px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    margin: 5px 10px;
+}
+.current-slide {
+    background: rgba(0,0,0,0.7);
 }
 footer {
     text-align: center;
