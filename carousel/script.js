@@ -76,3 +76,26 @@ left.addEventListener('click', ()=> {
         }
     })
 })
+
+
+// Changing slides when indicators are clicked
+indicators.forEach((element, index) => {
+    element.addEventListener('click', ()=> {
+        // Change Image
+        slides.forEach(item => {
+            if(!(item.classList.contains('hidden'))) {
+                item.classList.add('hidden');
+            }  
+        })
+        slides[index].classList.remove('hidden');
+
+        // Change Indicator
+        indicators.forEach(item => {
+            if(item.classList.contains('current-slide')) {
+                item.classList.remove('current-slide');
+            }
+        })
+        indicators[index].classList.add('current-slide');
+    })
+
+})
