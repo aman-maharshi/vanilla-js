@@ -21,8 +21,16 @@ function incCount() {
     }
 }
 
+function decCount() {
+    if(count == 0) {
+        count = 2;
+    }
+    else {
+        count--;
+    }
+}
+
 right.addEventListener('click', ()=> {
-    // Changing the Image
     slides.forEach((item, index) => {
         if(!(item.classList.contains('hidden'))) {
             item.classList.add('hidden');
@@ -35,6 +43,19 @@ right.addEventListener('click', ()=> {
             item.classList.remove('hidden');
         }
     })
+})
 
-
+left.addEventListener('click', ()=> {
+    slides.forEach((item, index) => {
+        if(!(item.classList.contains('hidden'))) {
+            item.classList.add('hidden');
+        }  
+    })
+    decCount();
+    //console.log(count);
+    slides.forEach((item, index)=> {
+        if(index == count) {
+            item.classList.remove('hidden');
+        }
+    })
 })
