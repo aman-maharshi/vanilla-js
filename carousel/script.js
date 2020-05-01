@@ -1,7 +1,7 @@
 const right = document.querySelector('.carousel__button--right');
 const left = document.querySelector('.carousel__button--left');
 const slides = document.querySelectorAll('.carousel__slide');
-const indicator = document.querySelectorAll('.carousel__indicator');
+const indicators = document.querySelectorAll('.carousel__indicator');
 
 // hiding all but the first slide
 slides.forEach((item, index)=> {
@@ -30,14 +30,30 @@ function decCount() {
     }
 }
 
+function changeIndicator() {
+    // hide any active indicator
+    indicators.forEach(item => {
+        if(item.classList.contains('current-slide')) {
+            item.classList.remove('current-slide');
+        }
+    })
+    // add indicator to the item with index = count
+    indicators.forEach((item, index)=> {
+        if(index == count) {
+            item.classList.add('current-slide');
+        }
+    })
+}
+
 right.addEventListener('click', ()=> {
-    slides.forEach((item, index) => {
+    slides.forEach((item) => {
         if(!(item.classList.contains('hidden'))) {
             item.classList.add('hidden');
         }  
     })
     incCount();
     //console.log(count);
+    changeIndicator()
     slides.forEach((item, index)=> {
         if(index == count) {
             item.classList.remove('hidden');
@@ -46,13 +62,14 @@ right.addEventListener('click', ()=> {
 })
 
 left.addEventListener('click', ()=> {
-    slides.forEach((item, index) => {
+    slides.forEach((item) => {
         if(!(item.classList.contains('hidden'))) {
             item.classList.add('hidden');
         }  
     })
     decCount();
     //console.log(count);
+    changeIndicator()
     slides.forEach((item, index)=> {
         if(index == count) {
             item.classList.remove('hidden');
