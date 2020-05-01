@@ -82,3 +82,9 @@ footer a {
 footer a:hover {
     color: rgb(25, 79, 122);
 }
+.hidden {
+    display: none;
+}
+.active {
+    display: block;
+}
