@@ -32,7 +32,7 @@ form {
 	background: #464646;
 	color: white;
 	top: 9px;
-	right: 12px;
+	right: 3px;
 	cursor: pointer;
 	font-family: consolas;
 	border-radius: 25px;
@@ -60,6 +60,8 @@ form {
 	width: 331px;
 	height: 42px;
 	outline: none;
+	padding-left: 1rem;
+	font-size: 16px;
 }
 input {
     padding: 4px 8px;
@@ -92,9 +94,11 @@ button:active {
 	margin-top: 5px;
 	position: relative;
 	top: 5px;
+	height: 16px;
+	text-align: center;
 }
 .message-success {
-	color: green;
+	color: #0c8990;
 }
 
 /*
