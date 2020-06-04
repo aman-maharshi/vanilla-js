@@ -4,8 +4,6 @@ html, body {
 body {
 	margin: 0;
 	font-size: 18px;
-	background: #B2FEFA;
-	background: linear-gradient(to right, #0ED2F7, #B2FEFA); 
 	background: #BE93C5; 
 	background: linear-gradient(to right, #7BC6CC, #BE93C5); 
 	font-family: 'Nunito', sans-serif;
@@ -32,7 +30,8 @@ main {
 	display: none;
 }
 .question {
-	background: #c1edfb;
+	background: #36556d;
+	color: white;
 	padding: 1rem;
 	margin: 10px 0;
 	line-height: 1.3;
@@ -56,10 +55,10 @@ main {
 	border-radius: 2px;
 }
 .options li:hover {
-	background: lightgoldenrodyellow;
+	background: lightyellow;
 }
 .options li:active {
-	outline: 2px solid gray;
+	outline: 2px solid #36556d;
 }
 .message {
 	height: 25px;
@@ -70,4 +69,11 @@ main {
 footer {
 	text-align: center;
 	font-size: 16px;
+}
+footer a {
+	text-decoration: none;
+	color: #36556d;
+}
+footer a:hover {
+	text-decoration: underline;
 }
