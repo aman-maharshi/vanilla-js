@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+body {
+	margin: 0;
+	font-family: 'PT Sans', sans-serif;
+	background-color: #eec0c6;
+	background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+	color: #323B3C;
+}
+* {
+	box-sizing: border-box;
+}
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+#quote-box {
+	min-height: 300px;
+	width: 500px;
+	box-shadow: 1px 2px 4px #9e9e9e;
+	padding: 1rem;
+	background: white;
+}
+#text {
+	font-family: 'PT Sans Narrow', sans-serif;
+	min-height: 150px;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	text-align: left;
+	font-size: 1.5rem;
+	line-height: 1.4;
+}
+#author {
+	text-align: right;
+	margin-bottom: 2rem;
+	height: 20px;
+	padding-right: 2rem;
+	font-size: 1.15rem;
+}
+.button-row {
+	display: flex;
+	justify-content: space-around;
+	line-height: 2;
+}
+#tweet-quote {
+	font-size: 1rem;
+	color: #0558a2;
+}
+#new-quote {
+	font-size: 1rem;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 2px;
+	outline: none;
+	background: #CCE8E5;
+	color: #516163;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+}
+#new-quote:active {
+	box-shadow: 1px 1px 2px gray;
+}
+
+@media (max-width: 576px) {
+	#quote-box {
+		width: 336px;
+	}
+
+} 
+
+/*
+	FOOTER
+---------------*/
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+footer p {
+	font-family: consolas;
+	color: #6f6f6f;
+}
+footer a {
+	text-decoration: none;
+	color: #0087ff;
+}
+footer a:hover {
+	color: #0558a2;
+	text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+	footer p {
+		font-size: 0.9rem;
+	}
+
+}
