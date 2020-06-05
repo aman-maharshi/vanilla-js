@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 body {
-    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-    background-repeat: no-repeat;
     font-family: Ubuntu, sans-serif;
     min-height: 100vh;
     padding: 3% 0;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 header {
     margin-bottom: 1rem;
@@ -16,7 +16,7 @@ main > .container {
     background-color: rgba(255,255,255,0.7);
     padding-top: 1em;
     padding-bottom: 1em;
-    border-radius: 10px;
+    border-radius: 4px;
     margin: 1em auto;
 }
 .list-group {
@@ -35,22 +35,25 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 1em;
-    color: white;
+    color: rgb(117, 117, 117);
+    letter-spacing: 1px;
 }
 footer a {
-    color: rgb(170, 170, 170);
+    color: rgb(59, 140, 172);
 }
+
 /*  COLOR CLASSES   */
 .bg-info {background-color: lightskyblue;}
 .bg-success {background-color: lightgreen;}
 .bg-warning {background-color: orange;}
 .bg-danger {background-color: lightcoral;}
+
 /*  FORMS AND MESSAGES  */
 #form-first {
     text-align: center;
     padding: 2rem 0;
     margin-bottom: 1rem;
-    border-bottom: 1px dotted gray;
+    border-bottom: 1px solid #cecece;
 }
 #enter-budget,  #button-one {
     height: 2em;
@@ -62,6 +65,7 @@ footer a {
     font-size: 1.75rem;
     margin-top: 5px;
 }
+
 /*  MEDIA QUERIES   */
 @media (max-width: 991px) {
     footer {
