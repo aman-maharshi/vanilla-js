@@ -4,7 +4,7 @@
 
 
 1. [toDos](https://aman-maharshi.github.io/vanilla-js/todos/)
-1. [Quiz App](https://aman-maharshi.github.io/vanilla-js/quiz-app/)
+1. [Simple Quiz App](https://aman-maharshi.github.io/vanilla-js/quiz-app/)
 1. [Weekly Budget App](https://aman-maharshi.github.io/vanilla-js/weekly-budget-app/)
 1. [Speed Typing Lite](https://aman-maharshi.github.io/vanilla-js/speed-typing-game/)
 1. [Password Generator](https://aman-maharshi.github.io/vanilla-js/password-generator/)
