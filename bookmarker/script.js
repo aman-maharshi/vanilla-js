@@ -4,7 +4,6 @@ const btn = document.querySelector('.bookmark-btn');
 const list = document.querySelector('.output-list');
 
 btn.addEventListener('click', addToList);
-document.addEventListener('DOMContentLoaded', loadFromLocalStorage);
 list.addEventListener('click', deleteItem);
 list.addEventListener('click', editItem);
 
@@ -37,47 +36,18 @@ function addToList(e) {
 			li.appendChild(cross);
 			
 			list.appendChild(li);
-			//saveToLocalStorage(li);
 			urlInput.value = '';
 			titleInput.value = '';
 		}	
 	}
 	// for an edited item
 	else {
-		console.log(editedItem);
 		editedItem.firstChild.textContent = title;
 		editedItem.firstChild.setAttribute("href", url);
 		// removing the marker class after editing
 		editedItem.classList.remove('marker');
 		urlInput.value = '';
 		titleInput.value = '';
-	}
-	
-}
-
-function saveToLocalStorage(li) {
-	let storageItems = getFromLocalStorage();
-	// Issue - unable to save the li node to the storageItems array in the line below
-	storageItems.push(li);
-	localStorage.setItem('bookmarks', JSON.stringify(storageItems));
-}
-
-// get an empty array or the array stored in local storage
-function getFromLocalStorage() {
-	let items = localStorage.getItem('bookmarks');
-	if(items == null) {
-		items = [];
-	}
-	else {
-		items = JSON.parse(items);
-	}
-	return items;
-}
-
-function loadFromLocalStorage() {
-	let items = JSON.parse(localStorage.getItem('bookmarks'));
-	if(items != null) {
-		console.log(items);
 	}
 	
 }
