@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+body {
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+}
+* {
+	box-sizing: border-box;
+}
+header {
+	padding: 1rem;
+	background: #fbe958;
+	border-bottom: 3px solid #b9a60f;
+}
+.heading {
+	font-size: 2rem;
+	text-align: center;
+	margin: 1rem;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+.sub-heading {
+	text-align: center;
+	margin-top: 0.7rem;
+	color: #968a28;
+	font-size: 0.95rem;
+}
+main {
+	padding: 1rem;
+	padding-top: 3rem;
+	min-height: 75vh;
+}
+.container {
+	width: 800px;
+	margin: 0 auto;
+}
+.input-form {
+	display: flex;
+	justify-content: center;
+}
+.input-form input {
+	margin-right: 2rem;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	color: #555;
+	font-size: 0.95rem;
+	border-radius: 2px;
+	width: 100%;
+}
+@media (max-width: 576px) {
+	.container {
+		width: auto;
+	}
+	.input-form {
+		flex-direction: column;
+	}
+	.input-form input {
+		margin-right: 0;
+		margin-bottom: 1rem;
+	}
+}
+.bookmark-btn {
+	padding: 8px 18px;
+	cursor: pointer;
+	border-radius: 2px;
+	background: #0e8a7e;
+	border: 2px solid #024a43;
+	letter-spacing: 1px;
+	color: white;
+	text-transform: uppercase;
+}
+.bookmark-btn:hover {
+	background: #009688;
+}
+.output-container {
+	margin-top: 2rem;
+}
+.output-list {
+	width: 80%;
+	margin: 0 auto;
+	list-style: none;
+	padding: 0;
+}
+.output-list li {
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #e0e0e0;
+}
+.output-list a {
+	text-decoration: none;
+	color: #0087ff;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.output-list a:hover {
+	text-decoration: underline;
+}
+.cross {
+	font-size: 0.9rem;
+	color: #f44336;
+	border: 1px solid;
+	padding: 3px 6px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.cross:hover {
+	box-shadow: 1px 2px 2px gray;
+}
+.cross:active {
+	box-shadow: 1px 2px 2px #f44336;
+}
+.edit {
+	text-decoration: underline;
+	color: gray;
+	margin-left: auto;
+	margin-right: 1.5rem;
+	line-height: 1.25;
+	cursor: pointer;
+}
+.edit:hover {
+	color: black;
+}
+.edit:active {
+	color: black;
+	text-shadow: 0 1px 2px gray;
+}
+
+footer {
+	font-size: 0.95rem;
+	text-align: center;
+}
+footer a {
+	color: #0e8a7e;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+footer a:hover {
+	text-decoration: underline;
+}
