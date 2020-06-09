@@ -13,3 +13,4 @@ Current Features:
 Features to add:
 * Add a task count indicator
 * Edit a list item without removing it
+* Rearrange todo items
