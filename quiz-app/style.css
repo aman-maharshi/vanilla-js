@@ -11,8 +11,17 @@ body {
 * {
 	box-sizing: border-box;
 }
+header p {
+	text-align: center;
+	font-size: 3rem;
+    font-weight: 700;
+	background: linear-gradient(to right, #000046, #1cb5e0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 main {
-	height: 90vh;
+	height: 70vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -63,7 +72,7 @@ main {
 .message {
 	height: 25px;
 	text-align: center;
-	color: green;
+	color: rgb(8, 85, 49);
 	font-weight: bold;
 }
 .indicator {
