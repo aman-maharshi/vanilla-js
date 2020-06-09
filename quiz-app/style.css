@@ -66,6 +66,12 @@ main {
 	color: green;
 	font-weight: bold;
 }
+.indicator {
+	height: 5px;
+	width: 0%;
+	background: white;
+	border-radius: 10px;
+}
 footer {
 	text-align: center;
 	font-size: 16px;
