@@ -11,7 +11,8 @@ const questions = {
     "Which of the following is not an inbuilt array function in JavaScript?" : [["filter", "forEach", "map", "set"], "set"],
     "You want to store an Array called 'items' to local storage. How will you convert it?" : [["JSON.stringify(items)", "items.indexOf()", "Object.keys(items)",  "item.toString()"], "JSON.stringify(items)"],
     "Which property references the DOM object that dispatched an event?" : [["self", "object", "target", "source"], "target"],
-    "How does a function create a closure?" : [["It reloads the document whenever the value changes", "It returns a reference to a variable in its parent scope", "It completes execution without returning", "It copies a local variable to the global scope"], "It returns a reference to a variable in its parent scope"]
+	"How does a function create a closure?" : [["It reloads the document whenever the value changes", "It returns a reference to a variable in its parent scope", "It completes execution without returning", "It copies a local variable to the global scope"], "It returns a reference to a variable in its parent scope"],
+	"How is a forEach statement different from a for statement?" : [["Only a for statement uses a callback function", "A for statement is generic, but a forEach statement can be used only with an array", "Only a forEach statement lets you specify your own iterator.", "A forEach statement is generic, but a for statement ca be used only with an array"], "A for statement is generic, but a forEach statement can be used only with an array"]
                    };
 let scoreValue = 0;
 let indicatorWidth = 0;
@@ -114,6 +115,6 @@ function resetScore() {
 function hideMessage() {
     setTimeout(function() {
         message.textContent = "";
-    }, 3000)
+    }, 3500)
 }
 
