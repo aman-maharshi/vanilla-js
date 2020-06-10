@@ -11,6 +11,5 @@ Current Features:
 * Load items from local storage on page load
 
 Features to add:
-* Add a task count indicator
 * Edit a list item without removing it
 * Rearrange todo items
