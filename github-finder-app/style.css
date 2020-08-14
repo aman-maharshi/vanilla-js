@@ -44,21 +44,21 @@ main {
     }
 }
 .profile {
-    background: rgb(238, 238, 238);
     width: 1000px;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px lightgray;
 }
 .profile-container {
     display: flex;
     justify-content: center;
+    background: rgb(238, 238, 238);
+    box-shadow: 1px 1px 2px lightgray;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
 }
 .user-dp {
     flex: 1;
     display: flex;
     justify-content: center;
-    padding: 1rem;
 }
 .user-dp img {
     width: 80%;
@@ -66,7 +66,6 @@ main {
 }
 .user-details {
     flex: 3;
-    padding: 1rem;
 }
 .user-details p {
     font-size: 1.2rem;
@@ -92,4 +91,41 @@ main {
     .user-details p {
         font-size: 1rem;
     }
+}
+.profile-container-two {
+    justify-content: space-around;
+}
+.custom-btn,
+.profile-btn {
+    background: #c0d3ff;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.custom-btn span {
+    display: inline-block;
+    margin-left: 0.5rem;
+    background: white;
+    padding: 3px;
+    width: 35px;
+    text-align: center;
+    border-radius: 3px;
+}
+.profile-btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: #673ab7;
+    background: yellow;
+}
+.profile-btn:hover {
+    color: black;
+    text-decoration: underline;
+}
+.alert {
+    text-align: center;
+    color: crimson;
+}
+.alert span {
+    color: gray;
 }

@@ -9,7 +9,7 @@ searchInput.addEventListener("keyup", e => {
         github.getUser(searchText).then(data => {
             if (data.profile.message == "Not Found") {
                 // Show user not found alert
-                console.log(`User - ${searchText} Not Found`)
+                ui.showAlert(searchText)
             } else {
                 // Show user profile
                 ui.showProfile(data.profile)

@@ -18,12 +18,18 @@ class UI {
                     <p><span>Company </span>${user.company}</p>
                 </div>
             </div>
+            <div class="profile-container profile-container-two">
+                <div class="custom-btn">Public Repos <span>${user.public_repos}</span></div>
+                <a class="profile-btn" href="${user.html_url}" target="_black">View Profile</a>
+                <div class="custom-btn">Followers <span>${user.followers}</span></div>
+            </div>
         `
-        console.log(user)
-
         this.profile.innerHTML = html
     }
     clearProfile() {
         this.profile.style.display = "none"
+    }
+    showAlert(inputText) {
+        this.profile.innerHTML = `<p class="alert">User <span>${inputText}</span> not found</p>`
     }
 }
