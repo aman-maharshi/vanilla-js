@@ -1,5 +1,5 @@
 const apiKey = "16f00dd6edca31d9934c7fd9cdfba77c"
-const baseUrl = "http://api.openweathermap.org/data/2.5/weather?"
+const baseUrl = "https://api.openweathermap.org/data/2.5/weather?"
 
 const form = document.querySelector(".inputForm")
 
