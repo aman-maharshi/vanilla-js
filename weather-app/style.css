@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #2c3e50;
+    font-family: "Nanum Gothic", sans-serif;
+    background: #8eaab6 url(./img/sky.jpg) no-repeat;
+    height: 100vh;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+.inputCity,
+.formBtn {
+    font-size: 1rem;
+    padding: 7px 14px;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 25px;
+    outline: none;
+    font-family: "Nanum Gothic", sans-serif;
+}
+.inputCity {
+    width: 275px;
+}
+.formBtn {
+    background: #22a6b3;
+    color: #ecf0f1;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s all ease;
+}
+.formBtn:hover {
+    background: #16818c;
+}
+.result {
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.result p {
+    margin: 1rem 0;
+    text-align: center;
+}
+.city,
+.country {
+    font-size: 1.5rem;
+}
+.temprature {
+    font-size: 6rem;
+    font-weight: 700;
+}
+.sky {
+    font-size: 1.3rem;
+}
+.min-max {
+    font-size: 1.1rem;
+}
+@media (min-width: 756px) {
+    .inputCity {
+        margin-right: 1rem;
+        width: 375px;
+    }
+}
