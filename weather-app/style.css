@@ -18,6 +18,11 @@ main {
     padding: 1rem;
     margin-top: 3rem;
 }
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
 .inputCity,
 .formBtn {
     font-size: 1rem;
@@ -26,9 +31,7 @@ main {
     border-radius: 25px;
     outline: none;
     font-family: "Nanum Gothic", sans-serif;
-}
-.inputCity {
-    width: 275px;
+    margin-bottom: 1rem;
 }
 .formBtn {
     background: #22a6b3;
@@ -62,7 +65,17 @@ main {
 .min-max {
     font-size: 1.1rem;
 }
+footer {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
 @media (min-width: 756px) {
+    .inputForm {
+        display: block;
+        text-align: center;
+    }
     .inputCity {
         margin-right: 1rem;
         width: 375px;
