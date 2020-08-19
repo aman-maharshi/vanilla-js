@@ -7,6 +7,7 @@
 1. [Weekly Budget Tracker](https://aman-maharshi.github.io/vanilla-js/weekly-budget-app/)
 1. [Speed Typing Lite](https://aman-maharshi.github.io/vanilla-js/speed-typing-game/)
 1. [Password Generator](https://aman-maharshi.github.io/vanilla-js/password-generator/)
+1. [Weather App](https://aman-maharshi.github.io/vanilla-js/weather-app/)
 1. [GitHub User Finder](https://aman-maharshi.github.io/vanilla-js/github-finder-app/)
 1. [Image Slider](https://aman-maharshi.github.io/vanilla-js/carousel/)
 1. [Website Bookmarker](https://aman-maharshi.github.io/vanilla-js/bookmarker/)
