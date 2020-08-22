@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>JavaScript Questions</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>JavaScript Questions</h1>
+
+        <div class="accordion">
+            <div class="accordion-header">
+                What is a closure, and how/why would you use one?
+            </div>
+            <div class="accordion-body">
+                <div class="accordion-body-content">
+                    A closure is the combination of a function and the lexical environment within which that function was declared. The word "lexical" refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Closures are functions that have access to the outer (enclosing) function's variables—scope chain even after the outer function has returned.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">
+                Explain event delegation
+            </div>
+            <div class="accordion-body">
+                <div class="accordion-body-content">
+                    Event delegation is a technique involving adding event listeners to a parent element instead of adding them to the descendant elements. The listener will fire whenever the event is triggered on the descendant elements due to event bubbling up the DOM. The benefits of this technique are:
+                    <ul>
+                        <li>Memory footprint goes down because only one single handler is needed on the parent element, rather than having to attach event handlers on each descendant.</li>
+                        <li>There is no need to unbind the handler from elements that are removed and to bind the event for new elements.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
