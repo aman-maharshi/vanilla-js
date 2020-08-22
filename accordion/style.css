@@ -1,5 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+body {
+    font-family: "Raleway", sans-serif;
+    background: #303952;
+    background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
+    color: white;
+    font-size: 1.1rem;
+    height: 100vh;
+}
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    background: linear-gradient(to left, #00a7ff 0%, #00bc3f 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+ul {
+    margin-left: 1rem;
+}
+li {
+    margin: 0.5rem 0;
+}
+span {
+    padding: 2px 4px;
+    border-radius: 5px;
+    background: rgb(223, 223, 223);
+}
+.accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+.accordion-item {
+    background: white;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.accordion-item-header {
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+.accordion-item-header::after {
+    content: "+";
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.accordion-item-header.active::after {
+    content: "-";
+}
+.accordioon-item-body {
+    transform: all 0.3s ease;
+}
+.accordion-item-body.hide {
+    display: none;
+}
+.accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5;
 }
