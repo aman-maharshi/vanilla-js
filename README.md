@@ -18,4 +18,5 @@
 1. [Filterable List](https://aman-maharshi.github.io/vanilla-js/filterable-list/)
 1. [Booklist App](https://aman-maharshi.github.io/vanilla-js/booklist-app/)
 1. [Weight Converter](https://aman-maharshi.github.io/vanilla-js/weight-converter/)
+1. [Accordion](https://aman-maharshi.github.io/vanilla-js/accordion/)
 1. [Popup Modal](https://aman-maharshi.github.io/vanilla-js/modal/)

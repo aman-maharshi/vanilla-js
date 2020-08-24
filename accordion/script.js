@@ -10,6 +10,7 @@ accordionHeaders.forEach(item => {
     })
 })
 
+// hiding all on page load / refresh
 document.addEventListener("DOMContentLoaded", () => {
     accordionBodies.forEach(item => {
         item.classList.add("hide")
