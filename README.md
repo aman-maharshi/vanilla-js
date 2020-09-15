@@ -5,7 +5,6 @@
 1. [toDos](https://aman-maharshi.github.io/vanilla-js/todos/)
 1. [Quiz App](https://aman-maharshi.github.io/vanilla-js/quiz-app/)
 1. [Weekly Budget Tracker](https://aman-maharshi.github.io/vanilla-js/weekly-budget-app/)
-
 1. [Password Generator](https://aman-maharshi.github.io/vanilla-js/password-generator/)
 1. [Website Bookmarker](https://aman-maharshi.github.io/vanilla-js/bookmarker/)
 1. [Quotes Machine](https://aman-maharshi.github.io/vanilla-js/quotes-machine/)
