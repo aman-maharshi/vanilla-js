@@ -16,6 +16,7 @@
 
 1. [Weather App](https://aman-maharshi.github.io/vanilla-js/weather-app/)
 1. [GitHub User Finder](https://aman-maharshi.github.io/vanilla-js/github-finder-app/)
+1. [Pagination](https://aman-maharshi.github.io/vanilla-js/pagination/)
 
 #### Web Components - Elements that used in many websites
 

@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap");
+
+body {
+    font-family: "Barlow", sans-serif;
+    color: #333;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(15, 96, 163);
+}
+a:hover {
+    color: rgb(9, 63, 107);
+}
+
+main {
+    padding: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    min-height: 88vh;
+}
+
+.header {
+    background: lightblue;
+    padding: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+.content {
+    padding: 0.5rem 1rem;
+}
+
+.pagination {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination__link {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    transform: all 0.3s ease;
+}
+.pagination__link:not(:last-child) {
+    border-right: none;
+}
+.pagination__link:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+}
