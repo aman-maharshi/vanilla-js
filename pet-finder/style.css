@@ -37,6 +37,9 @@ body {
     padding: 5px 10px;
     font-size: 1rem;
 }
+.slideshow p {
+    text-align: center;
+}
 .slideshow img {
     max-height: 500px;
     max-width: 900px;
