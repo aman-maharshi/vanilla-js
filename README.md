@@ -18,7 +18,7 @@
 1. [GitHub User Finder](https://aman-maharshi.github.io/vanilla-js/github-finder-app/)
 1. [Pagination](https://aman-maharshi.github.io/vanilla-js/pagination/)
 
-#### Web Components - Elements that used in many websites
+#### Web Components - Elements used on many websites
 
 1. [Image Slider](https://aman-maharshi.github.io/vanilla-js/carousel/)
 1. [Filterable List](https://aman-maharshi.github.io/vanilla-js/filterable-list/)
