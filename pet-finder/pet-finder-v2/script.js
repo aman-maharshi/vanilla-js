@@ -22,7 +22,7 @@ async function loadByBreed(e) {
     if (breed != "Select") {
         const response = await fetch(`https://dog.ceo/api/breed/${breed}/images`)
         const data = await response.json()
-        console.log(data.message)
-        /* 35 */
+        console.log(item)
+        /* 45 */
     }
 }

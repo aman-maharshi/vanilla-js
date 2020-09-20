@@ -11,7 +11,10 @@ body {
     box-sizing: border-box;
 }
 .app {
-    height: 95vh;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
 .header {
     text-align: center;
@@ -26,4 +29,15 @@ body {
 .breeds {
     padding: 5px 10px;
     font-size: 1rem;
+}
+.slideshow {
+    background: #333;
+    flex: 1;
+}
+.slide {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
 }
