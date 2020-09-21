@@ -33,6 +33,7 @@ body {
 .slideshow {
     background: #333;
     flex: 1;
+    overflow: hidden;
 }
 .slide {
     height: 100%;
