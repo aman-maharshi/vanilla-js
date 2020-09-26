@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Epilogue", sans-serif;
+}
+.app {
+    text-align: center;
+}
+.problem {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    min-height: 100px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.answer {
+    padding: 4px 8px;
+    font-size: 2rem;
+}
