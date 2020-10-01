@@ -21,6 +21,24 @@ h3 {
     max-height: 47vh;
     overflow-y: scroll;
 }
+
+.list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.task{
+    flex: 9;
+    word-break: break-all;
+}
+.delete{
+    /* flex: 1; */
+    width: 30px;
+    margin-left: 20px;
+}
+
 footer {
     position: absolute;
     bottom: 0;
