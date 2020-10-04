@@ -22,13 +22,15 @@ let quotes = [  "Little by little, one travels far.",
                 "You can't ever reach perfection, but you can believe in an asymptote toward which you are ceaselessly striving.",
                 "The greatest discovery of any generation is that a human can alter his life by altering his attitude.",
                 "The most important thing about art is to work. Nothing else matters except sitting down every day and trying.",
-                "Forget about being an expert or a professional, and wear your amateurism (your heart, your love) on your sleeve. Share what you love, and the people who love the same things will find you."
+                "Forget about being an expert or a professional, and wear your amateurism (your heart, your love) on your sleeve. Share what you love, and the people who love the same things will find you.",
+                "Doubt kills more dreams than failure ever will.",
+                "If its important to you, you will find a way. If not, you will find an excuse."
         ];
 let authors = ["J.R.R. Tolkien", "Abraham Lincoln", "Abraham Lincoln", "Mahatma Gandhi", "Anne Frank", "Christopher Mcandles", 
                 "Christopher Mcandles", "Richard Monckton Milnes", "Marcus Aurelius", "Annie Dillard", "Aristrotle", 
                 "Logan Pearsall Smith", "Edmund Burke", "Joan Baez", "Howard Schultz", "Thomas Carlyle", 
                 "Eleanor Roosevelt", "Kamal Ravikant", "Abraham Maslow", "George Eliot", "Audre Lorde", "Paul Kalanithi",
-                "William James", "Steven Pressfield", "Austin Kleon"];
+                "William James", "Steven Pressfield", "Austin Kleon", "Suzy Kassem"];
 
 
 let newQuote = document.getElementById('new-quote'),
