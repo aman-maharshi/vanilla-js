@@ -24,13 +24,26 @@ let quotes = [  "Little by little, one travels far.",
                 "The most important thing about art is to work. Nothing else matters except sitting down every day and trying.",
                 "Forget about being an expert or a professional, and wear your amateurism (your heart, your love) on your sleeve. Share what you love, and the people who love the same things will find you.",
                 "Doubt kills more dreams than failure ever will.",
-                "If its important to you, you will find a way. If not, you will find an excuse."
+                "If its important to you, you will find a way. If not, you will find an excuse.",
+                "It is not the mountains we conquer but ourselves.",
+                "There is no greater agony than bearing an untold story inside you.",
+                "Don't wait. The time will never be just right.",
+                "Most people work hard and spend their health trying to achieve wealth and once they retire, they spend their wealth trying to get back their health.",
+                "One man practicing sportsmanship is better than a hundred teaching it.",
+                "Success each day should be judged by the seeds sown, not the harvest reaped.",
+                "We are the creative force of our life, and through our own decisions rather than our conditions, if we carefully learn to do certain things, we can accomplish those goals.",
+                "Risks must be taken because the greatest hazard in life is to risk nothing."
         ];
 let authors = ["J.R.R. Tolkien", "Abraham Lincoln", "Abraham Lincoln", "Mahatma Gandhi", "Anne Frank", "Christopher Mcandles", 
                 "Christopher Mcandles", "Richard Monckton Milnes", "Marcus Aurelius", "Annie Dillard", "Aristrotle", 
                 "Logan Pearsall Smith", "Edmund Burke", "Joan Baez", "Howard Schultz", "Thomas Carlyle", 
                 "Eleanor Roosevelt", "Kamal Ravikant", "Abraham Maslow", "George Eliot", "Audre Lorde", "Paul Kalanithi",
-                "William James", "Steven Pressfield", "Austin Kleon", "Suzy Kassem"];
+                "William James", "Steven Pressfield", "Austin Kleon", "Suzy Kassem", "Ryan Blair", "Edmund Hillary",
+                "Maya Angelou", "Napoleon Hill", "Unknown", "Knute Rockne", "John C. Maxwell", "Stephen Covey",
+                "Leo Buscaglia"
+        ];
+
+//console.log(quotes.length, authors.length)
 
 
 let newQuote = document.getElementById('new-quote'),
