@@ -18,6 +18,7 @@
 1. [GitHub User Finder](https://aman-maharshi.github.io/vanilla-js/github-finder-app/)
 1. [Pet Finder](https://aman-maharshi.github.io/vanilla-js/pet-finder/)
 1. [Pagination](https://aman-maharshi.github.io/vanilla-js/pagination/)
+1. [Typing Suggestions](https://aman-maharshi.github.io/vanilla-js/typing-suggestions/)
 
 #### Web Components - Elements used on many websites
 
