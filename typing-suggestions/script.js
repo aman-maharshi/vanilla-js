@@ -1,5 +1,6 @@
 const inputBox = document.querySelector(".input-box")
 const results = document.querySelector(".results")
+let suggestedItems
 
 async function getData() {
     const response = await fetch("https://dog.ceo/api/breeds/list/all")
@@ -24,6 +25,7 @@ inputBox.addEventListener("keyup", e => {
             matchingResult = findMatchingBreed(userInput, breeds)
         } else {
             matchingResult = []
+            results.style.display = "block"
         }
         let suggestionsHTML = matchingResult
             .map(item => {
@@ -31,5 +33,16 @@ inputBox.addEventListener("keyup", e => {
             })
             .join(" ")
         results.innerHTML = suggestionsHTML
+        handleSuggestionClick(document.querySelectorAll(".results li"))
     })
 })
+
+function handleSuggestionClick(element) {
+    element.forEach(item => {
+        item.addEventListener("click", e => {
+            const clickedText = e.target.innerText
+            inputBox.value = clickedText
+            results.style.display = "none"
+        })
+    })
+}

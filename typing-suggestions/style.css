@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+body {
+    margin: 0;
+    font-family: "Arvo", serif;
+    background: #eaecef;
+}
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #cc4425;
+}
+.container {
+    padding: 1rem;
+    text-align: center;
+    max-width: 500px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.input-box {
+    font-size: 1rem;
+    padding: 7px 10px;
+    outline: none;
+    border: 1px solid lightgray;
+    color: #3e4147;
+}
+.results {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    padding: 0;
+    margin: 0;
+    z-index: 5;
+    list-style: none;
+    text-align: left;
+    width: 180px;
+    background: white;
+}
+.results li {
+    line-height: 1.5;
+    margin: 5px 0;
+    padding-left: 10px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    cursor: pointer;
+}
+.results li:hover {
+    background: rgb(236, 236, 236);
+}
