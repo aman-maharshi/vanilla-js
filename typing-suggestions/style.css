@@ -47,3 +47,21 @@ body {
 .results li:hover {
     background: rgb(236, 236, 236);
 }
+footer {
+    text-align: center;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #3e4147;
+}
+footer a {
+    color: #cc4425;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    footer {
+        display: none;
+    }
+}
