@@ -30,13 +30,16 @@ function addTodo(e) {
     if(todo != '') {
         // creating a list item
         let li = document.createElement('li');
-        li.className = 'list-group-item';
-        li.textContent = todo;
+        li.className = 'list list-group-item';
+        let div = document.createElement("div")
+        div.className='task'
+        div.textContent = todo;
 
         // creating the 'X' button and appending it to 'li'
         let xBtn = document.createElement('button');
-        xBtn.className = 'btn btn-dark btn-sm float-right';
+        xBtn.className = 'btn delete btn-dark btn-sm float-right';
         xBtn.textContent = 'X';
+        li.appendChild(div)
         li.appendChild(xBtn);
 
         // appending the todo item to the list
