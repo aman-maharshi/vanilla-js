@@ -4,6 +4,7 @@
 
 1. [toDos](https://aman-maharshi.github.io/vanilla-js/todos/)
 1. [Quiz App](https://aman-maharshi.github.io/vanilla-js/quiz-app/)
+1. [Text to Speech](https://aman-maharshi.github.io/vanilla-js/text-to-speech/)
 1. [Weekly Budget Tracker](https://aman-maharshi.github.io/vanilla-js/weekly-budget-app/)
 1. [Tags Drag and Drop](https://aman-maharshi.github.io/vanilla-js/tags-drag-and-drop/)
 1. [Password Generator](https://aman-maharshi.github.io/vanilla-js/password-generator/)
