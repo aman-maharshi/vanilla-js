@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <title>VoiceOver - TTS & Translation</title>
+</head>
+
+<body class="gradient-bg flex items-center justify-center h-screen">
+  <div class="bg-[#212121] text-white shadow-md rounded-xl p-7 main-container">
+    <h1 class="text-2xl font-semibold text-center mb-4 flex gap-4 items-center justify-center">
+      <img src="waveIcon.svg" class="h-10 w-10" alt="wave">
+      VoiceOver
+    </h1>
+    <p class="text-center my-4 text-sm text-stone-400">
+      This app allows you to convert text to speech and translate it into different languages.
+      Simply type your text, select a language and voice, and click play to hear the translation.
+    </p>
+
+    <textarea
+      class="w-full h-32 p-3 border border-stone-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none bg-[#373737] placeholder:text-stone-300"
+      placeholder="Type your text here..."></textarea>
+
+    <!-- <div class="mt-4">
+      <label for="languageSelect" class="block text-sm font-medium mb-2">
+        Select Language
+      </label>
+      <select id="languageSelect"
+        class="w-full p-3 border border-stone-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer bg-[#373737]">
+      </select>
+    </div> -->
+
+    <div class="mt-4">
+      <label for="voiceSelect" class="block text-sm font-medium mb-2">Select Voice</label>
+      <select id="voiceSelect"
+        class="w-full p-3 border border-stone-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer bg-[#373737]">
+        <option value="default">Default Voice</option>
+      </select>
+    </div>
+
+    <button
+      class="mt-6 w-full flex items-center gap-2 justify-center cta-bg text-white font-medium py-3 rounded-xl focus:outline-none hover:ring-2 hover:ring-blue-500"
+      id="playButton">
+      <img src="speakerIcon.svg" class="h-5 w-5" alt="speaker">
+      Play Text
+    </button>
+
+    <p id="error" class="text-red-400 h-4 mt-2 text-sm"></p>
+  </div>
+
+  <footer class="hidden md:block fixed bottom-2 left-0 right-0 text-center p-2">
+    <p>Designed and Coded by
+      <a href="http://amanmaharshi.com" target="_blank" class="text-[#36556d] hover:underline">Aman Maharshi</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
